@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision of C source</title>
+</head>
+
+<body>
+    <h1>SOURCE_CODES</h1><br>
+    <hr>
+    <h2>Structure</2><br>
+        <pre>
+        #include<stdio.h>
+            int main () {
+                printf("Hi i am Sujal Mehta ");
+                return 0 ;
+            }
+    </pre>
+        <hr><br>
+        <h2>Variable</h2><br>
+        <pre>
+        //assigning and some normal operation
+
+#include <stdio.h>
+int main()
+{
+
+    int integers = 125;
+    float realnum = 8.5;
+    char character = '@';
+    // "\n" is used to break the line
+    /* for integers variable we use %d 
+    and for real number we use %f and in character we use %c 
+    */
+    printf("printing integers = %d \n", integers);
+    printf("printing realnum = %f \n", realnum);
+    printf("printing character = %c \n", character);
+    //Now we will write some calculation perfomed by assigning through variables
+    //show we will assign value for example
+    int calculation_1 = 5;
+    int calculation_2 = 8;
+    int calculation_3 = 45 + 45;
+    int calculation_4 = 14 / 2;
+    float calculation = 0.1 + 12;
+    //calculation begins
+    printf("printing sum of assigned variable calculation_1 and calculation_2 = %d \n ", calculation_1 + calculation_2);
+    //printing inline calculations
+    printf("Inline assigned variable calulation = %d\n", calculation_3);
+    printf("Inline printing of assigned variable = %d\n", calculation_4);
+    printf("Inline printing of assigned real numbers  = %f", calculation);
+}
+    </pre>
+        <hr><br>
+        <h2>Input</h2><br>
+        <pre>//Input method and practises
+        #include<stdio.h>
+        int main () {
+            int a, b;
+            printf("addition of yours number \n");
+            printf("input your value %d\n",a);
+            scanf("%d", &a);
+            printf("input your value %d\n",b);
+            scanf("%d", &b);
+            printf("Sum of your input is = %d\n",a + b ); 
+            return 0 ;
+        }
+    </pre>
+        <hr><br>
+        <h2>Area of different structure</h2>
+        <pre>
+        //calculatign the area of rectangle 
+        //hard code input 1
+        /*
+        #include<stdio.h>
+        int main () {
+            int length=5, breadth=5;
+            int area =length*breadth;
+            printf("what is the length of rectangle %d",area);
+            return 0 ;
+        }
+        */
+        
+        
+        //calculation of area of triangle using input method
+        
+        /* 
+        #include<stdio.h>
+        int main () {
+            int base, height ;
+            
+            printf("Input your base of rectangle %d\n",base);
+            scanf("%d", &base);
+            
+            printf("Input your height of rectangle %d\n",height);
+            scanf("%d", &height);
+        
+            printf("Area of your rectangle = %d",1/2(base*height));
+        
+        
+            return 0 ;
+        }
+        */
+        
+    </pre>
+        <hr><br>
+        <h2>Area Diff way</h2>
+        <pre>//finding the area of circle
+            /*
+            #include<stdio.h>
+            int main () {
+                int radius=5 ;
+                float  pi=5;
+                printf("area of the circle is %f \n", pi * radius * radius);
+                return 0 ;
+            }
+            */
+            //practise second 
+            
+            // 2
+            //area of cylinder 
+            // #include<stdio.h>
+            // int main () {
+            //     int radius= 3 ;
+            //     float  pi=3.14;
+            //     printf("area of the circle is %f \n", pi * radius * radius);
+            //     //just adding height in formula 
+            //     int height=3 ;
+                
+            //     //method one (directly)
+            //     printf("area of cylinder is %f\n",pi * radius * radius * height);
+                
+            //     //or we can assigned area of circle like this 
+            //     float area_of_circle= pi * radius * radius ;
+            //     printf("area of cylinder %f\n",area_of_circle * height);
+            
+            // //     return 0 ;
+            // // }
+            
+            // // 3
+            // //practise third inputing method of above 
+            // #include<stdio.h>
+            // int main () {
+            
+            //     //here assigning variables 
+            //     float  radius ;
+            //     float height ;
+            //     float pi =3.14; //pi has been kept as constant but we can remove it and uncomment the line number 46 and 47 and delete the constant also comment down the line number 49
+               
+            //     printf("input the radius of the circle %f",radius);
+            //     scanf("%f", &radius);
+            
+            //     printf("input the pi value  of the circle %f",radius);
+            //     scanf("%f" ,&pi);
+               
+            //     // printf(" your pi value has been assigned as %f\n",pi); // uncomment and assign pi value here and comment down line number 46 and 47. 
+                
+            //     float area_circle= pi * radius * radius ; //assigning variable for the formula of cylinder  to be executed for calculation .   
+            //     printf("The area of the circle is %f\n",area_circle);
+            
+            
+            //     printf("Now we are good to go for calculating area of cylinder \n");
+                
+            //     printf("input the value of height %f",height);
+            //     scanf("%f", &height);
+            
+            //     float area_cylinder = area_circle * height ; // assigning variable for the formula of cylinder to be executed for calculation .
+            //     printf("the area of cylinder is = %f",area_cylinder);
+            
+            //     return 0 ;
+            // }
+            
+        </pre>
+        <hr><br>
+        <h2>Celcius and farenheit</h2>
+        <pre>
+            //celcius to farenheit
+            // #include<stdio.h> 
+            // int main () {
+                
+            //     float celcius;
+            //     printf("Input the value of celcius to be converted %f",celcius);
+            //     scanf("%f", &celcius);
+            
+            //     float calculation= celcius * 9/5;
+            //     printf("Calculation part_1 = %f\n",calculation);
+            
+            //     float calculation_1= calculation + 32 ;
+            //     printf("calculation part_2 = %f\n",calculation_1);
+            
+            //     printf("farenheit is = %f\n",calculation_1);
+                
+                
+            //     return 0;
+            // }
+            
+            
+            //2
+            // #include<stdio.h> 
+            // int main () {
+                
+            //     float celcius;
+            //     printf("Input the value of celcius to be converted %f",celcius); //celcius value input 
+            //     scanf("%f", &celcius);
+            
+            //     float calculation=  (celcius * 9/5 ) + 32 ; //putting values of formula like this 
+            //     printf("Calculation part_1 = %f\n",calculation);
+            
+                
+            //     printf("farenheit is = %f\n",calculation); //result 
+                
+                
+            //     return 0;
+            // }
+            
+            
+        </pre>
+        <hr><br>
+        <h2>divisibility test</h2>
+        <pre>
+            //checking that 97 is divisible by your number or not
+#include<stdio.h>
+int main () {
+    int num;
+    printf("Enter the number \n");//getting the value of user
+    scanf("%d", &num);
+
+    printf("divisibility test %d", num%97);
+    return 0 ;
+}
+//if the number is able to get divide then result will be 0 
+
+        </pre>
+        <hr><br>
+        <h2>Priority Checking</h2>
+        <pre>
+            // solving 3*x/y -z + k
+            #include <stdio.h>
+            int main()
+            {
+                int x = 2;
+                int y = 3;
+                int z = 3;
+                int k = 1;
+                //here assining variables for calculation of                          // this process is wrong we manipulated the terms and violeted rules and laws .
+                // int calculation_1 = (x / y) * 3 - z + k;                           // this process is wrong we manipulated the terms and violeted rules and laws .
+                // int calculation_2;                                                 // this process is wrong we manipulated the terms and violeted rules and laws .
+                // int calculation_3;                                                 // this process is wrong we manipulated the terms and violeted rules and laws .
+                // printf("%d", calculation_1);                                       // this process is wrong we manipulated the terms and violeted rules and laws .
+            
+                printf("printing the solution %d", 3 * x / y - z + k);
+                // this is correct in above process we manipulated the terms and violeted the operator priority and associative property
+                return 0;
+            }
+        </pre>
+        <hr><br>
+        <h2>odd or even checking</h2>
+        <pre>
+            //writting a  program to detect odd or even using if - else statement
+
+            #include <stdio.h>
+            int main()
+            {
+                int a;
+                printf("Enter the number\n"); /// taking input 
+                scanf("%d" , &a);
+            
+                if (a%2==0) // making conditions 
+                {
+                    printf("%d  is even \n" , a);
+                }
+                else
+                {
+                    printf("%d  is odd \n" ,a); //if our above condition didn't satisfy then this will be shown 
+                }
+                return 0;
+            }
+        </pre>
+        <hr><br>
+        <h2>logical operator</h2>
+        <pre>
+            #include <stdio.h>
+                int main()
+                {
+                    int age; //assigning variable
+                    int admin = 1010; //assgning variable for admin with executable code 
+                    printf("If your are 18 and below 70 you can drive Vechiles of all category \n"); //display message 
+                    printf("Enter your age or if you are amdin enter admin code \n "); //showing information
+                
+                    //making input program to get age and admin code 
+                    printf("Enter your age or admin code here ");
+                    scanf("%d", &age);
+                
+                    if ((age >= 18 && age <= 70) ) //admin code 1010
+                    {
+                        printf("you can drive the vechiles  \n"); 
+                    }
+                    else if (age == admin) //admin display 
+                    {
+                        printf("You are admin \nYou can Drive sir\n");
+                    }
+                
+                    else if ((age >= 71) && !(age == admin)) //not programme
+                    {
+                        printf("YOU CAN't DRIVE AND YOU ARE NOT ADMIN");
+                    }
+                    else {
+                        printf("Your are not capable");
+                    }
+                
+                    return 0;
+                }
+                
+        </pre>
+        <hr><br>
+        <h2>logical else if</h2>
+        <pre>
+            #include <stdio.h>
+                int main()
+                {
+                    int age_spccode;
+                    // int invitation_code;
+                
+                    printf("Enter Your age or code to continue in the site \n");
+                    scanf("%d", &age_spccode);
+                    printf("Are you confirm that your entered this number %d\n", age_spccode);
+                
+                    if (age_spccode >= 18 && age_spccode <= 100)
+                    {
+                        printf("you are allowed to continue in this page");
+                    }
+                    else if (age_spccode == 8520)
+                    { //admin code number assigning
+                        printf("You are admin you can enter");
+                    }
+                    else if (age_spccode == 1000)
+                    { //vip code assigning
+                        printf("you are our vip member and you can continue");
+                    }    
+                    else 
+                    {
+                        printf("****chal nikal jaldi seyyyy****");
+                    }
+                    return 0;
+                }   
+        </pre>
+        <hr><br>
+        <h2>switch case</h2>
+        <pre>
+
+        </pre>
+        <hr><br>
+        <h2>switch case_2</h2>
+        <pre>
+            #include<stdio.h>
+                int main()
+                {
+                   int score;
+                   score<=100;
+                
+                   printf("Enter score( 0-100): ");
+                   scanf("%d", &score);
+                
+                   switch( score / 10 )
+                   {
+                
+                   case 10:
+                   case 9:
+                     printf("Grade: A");
+                     break;
+                
+                   case 8:
+                     printf("Grade: B");
+                     break;
+                
+                   case 7:
+                     printf("Grade: C");
+                     break;
+                
+                   case 6:
+                     printf("Grade: D");
+                     break;
+                
+                   case 5:
+                     printf("Grade: E");
+                     break;
+                
+                   default:
+                     printf("Grade: F");
+                     break;
+                
+                   }
+                
+                   return 0;
+                }
+        </pre>
+        <hr><br>
+        <h2>pass and fail</h2>
+        <pre>
+                            //Writting a program to find wheather a student is pass or fail 
+                //assuming total mark 100 an subect 3 and each subject required above 30 mark to get pass and overall pass decison  
+
+                #include<stdio.h>
+                int main () {
+                    int physics ,chemistry ,maths ;
+                    float total ;
+
+                    printf ("Enter the marks here in the sequence of Physics,chemistry,maths \n");
+                    scanf("%d %d %d", &physics, &chemistry, &maths);
+                
+                total= (physics+chemistry+maths)/3  ;
+                if (total <40 || physics < 30 || chemistry < 30 || maths <30){
+                    printf ("You have got  %f and you are fail ",total);
+                }
+                else {
+                    printf ("You are pass by %f  percentage, keep it up ",total);
+                }
+                    return 0 ;
+                }
+                >
+    </pre>
+        <hr><br>
+        <h2>Tax calculation</h2>
+        <pre>
+            //if income is below 2.5l no need to pay tax and if income is above 2.5 to 5l then 5 perceny ....similaryly ..
+
+#include<stdio.h>
+int main () {
+    float  tax = 0 , income; //assigning intial tax rate
+
+    printf ("Enter Your Income Here \n"); // collecting income amount 
+    scanf("%f", &income);
+
+    if (income >= 0 && income <= 250000){ // condition applying
+        tax = tax + 0 * (income);
+    }
+
+//we keep if without else or any because all will be read in this structure too ,
+
+
+    if (income >= 250000 && income <= 500000)
+    { // condition applying
+        tax = tax + 0.05 * (income - 250000);
+    }
+    if (income >= 500000 && income <= 1000000)
+    { // condition applying
+    tax = tax + 0.2 * (income - 500000);
+    }
+    if (income >= 1000000 )
+    { // condition applying
+        tax = tax + 0.3 * (income - 1000000);
+    }
+    printf ("Your Tax amount is %f ",tax); //final result showing 
+
+    return 0 ;
+}
+        </pre>
+        <hr><br>
+        <h2>ASCII Table</h2>
+        <pre>
+            //according to ASCII table checking lower and Upper case characters
+
+#include <stdio.h>
+int main()
+{
+    char ch; //assigning
+
+    printf("Enter the character here \n"); // taking input
+    scanf("%c", &ch);
+
+    //For lower 97 to 122 lower
+    // For upper case 65 -90  Upper 
+    
+    if (ch >= 97 && ch <= 122) {
+        printf ("It is lower case");
+    }
+     else if ( ch >= 65 && ch <= 90){
+        printf("It is uppercase");
+    }
+    else {
+        printf ("It is  not an alphabet or invalid operation");
+    }
+    
+    return 0;
+}
+        </pre>
+
+        <hr><br>
+        <h2>Comparing Number</h2>
+        <pre>
+            // Comparing four numbers (greatest number)
+        
+        #include<stdio.h>
+        int main () {
+            int a , b, c, d ;
+        
+        printf ("Enter Four numbers to check greatest one \n"); //i took 4 num
+        scanf ("%d %d %d %d", &a ,&b ,&c, &d );
+        
+            if (a>b && a>c && a>d ){ //checking that a is biger than other number or not
+                printf ("%d is the greatest number",a);
+            } 
+        // else if (b>a || b>c || b>d){
+        else if (b>c && b>d){    //mathiko line ma a lai compare gari sakey ko bhayera yaha a comparee garina 
+            printf ("%d is the greatest number",b);
+        }
+        // else if (c>a || c>b || c>d) {
+        else if ( c>d) {
+            printf ("%d is the greatest number",c);
+        }
+        // else if (d>a || d>b || d>c ) {
+            else {
+            printf ("%d is the greatest number",d);
+        }
+            return 0 ;
+        }
+        </pre>
+        <hr><br>
+        <h2>
+            Manual Repitation
+        </h2>
+        <pre>
+            #include<stdio.h>
+                int main () {
+                    int a=1;
+                    
+                    //we can print like this using for 
+                    // for ( a = 1; a < 10; a++)
+                    // {
+                    // printf ("%d\n",a);
+                    //     /* code */
+                    // }
+                    
+                    printf ("%d\n",a);
+                
+                    a++;
+                    printf ("%d\n",a);
+                
+                    a++;
+                    printf ("%d\n",a);
+                
+                    a++;
+                    printf ("%d\n",a);
+                
+                    
+                    return 0 ;
+                }   
+        </pre>
+        <hr>
+        <br>
+        <h2>while loops</h2>
+        <pre>
+            #include <stdio.h>
+                int main()
+                {
+                    int a;
+                    scanf("%d", &a);
+                
+                    // while (a > 0 && a < 1000000)
+                    while (a < 10)
+                    {
+                        printf("%d\n", a);
+                        a++;
+                    }
+                    return 0;
+                }
+                
+                //way to do manually but not pratical for large number
+                
+                // #include<stdio.h>
+                // int main () {
+                //     int a=50 ;
+                
+                // a++;
+                // printf("%d\n",a);
+                
+                // a++;
+                // printf("%d\n",a);
+                
+                // a++;
+                // printf("%d\n",a);
+                
+                // a++;
+                // printf("%d\n",a);
+                
+                // a++;
+                // printf("%d\n",a);
+                
+                // a++;
+                // printf("%d\n",a);
+                
+                //     return 0 ;
+                // }
+        </pre>
+        <hr><br>
+        <h2>While loop</h2>
+        <pre>
+            #include <stdio.h>
+                int main()
+                {
+                    int i = 0 ;
+                
+                    // scanf ("%d" , &i);
+                
+                    while( i <= 100)
+                    {
+                        if (i >= 0){
+                        printf ("Natural number  are %d\n",i);
+                        i++ ;
+                    }
+                    }
+                        
+                }
+        </pre>
+        <hr><br>
+        <h2>Increment Decrement</h2>
+        <pre>
+            #include <stdio.h>
+                int main()
+                {
+                    int a = 1;
+                
+                    printf("%d \n", a); //here the value of a will be printed now
+                
+                    // now the value will be same for the first time
+                    a++;
+                    printf(" value after increment is to  %d\n ", a);
+                
+                    //or
+                    ++a; //the value  get
+                    printf(" value after increment is to  %d\n ", a);
+                
+                    //procedure two previously we have already increased two times so now initial value of a is now ,a= 3
+                
+                    printf("value after increment %d\n ", ++a); //here the value get increased at first and then printed
+                
+                    printf("value after increment is %d\n ", a++); // here we get printed first and then get increased so we get unincreased output
+                    printf("Now if we see the value has gotten increase by 1 as we have used a++ in previous line %d\n", a);
+                    //similiary we have
+                    // --a and i-- for decrement and working function is similar
+                
+                    return 0;
+                } 
+        </pre>
+        <hr><br>
+        <h2>Inc and dec</h2>
+        <pre>
+            #include<stdio.h>
+                int main () {
+                    int a = 1;
+                
+                    printf (" %d \n",a); //here the value of a will be printed now ,
+                
+                    a+=10 ; 
+                    printf (" value after increment is to  %d\n ",a);
+                
+                    //or 
+                    a+=10 ; //the value  get 
+                    printf (" value after increment is to  %d\n ",a);
+                
+                    //procedure two previously we have already increased two times so now initial value of a is now ,a= 3
+                
+                    printf("value after increment %d\n " ,++a ); //here the value get increased at first and then printed 
+                
+                    printf("value after increment is %d\n ", a+=10);
+                    return 0;
+                }
+        </pre>
+        <hr><br>
+        <h2>do looop</h2>
+        <pre>
+            #include<stdio.h>
+                int main () {
+                    int i = 0;
+                 
+                    do {
+                        printf ("The value of i is %d\n",i);
+                    i+=10;
+                    // i*=10; // this operators can also be operated 
+                    }while (i < 1000);
+                
+                    return 0 ;
+                }   
+                
+                
+                //while check the condition first and then execute where do make opposite procedure
+        </pre>
+        <hr><br>
+        <h2>do loop</h2>
+        <pre>
+            #include<stdio.h>
+                int main () {
+                     int a =1 ;
+                
+                     printf("Natural number are \n");
+                
+                     
+                     do {
+                         printf("%d\n",a);
+                     a++ ;
+                     }while (a <= 4);
+                
+                    return 0 ;
+                }
+        </pre>
+        <hr><br>
+        <h2>for loop</h2>
+        <pre>
+            // #include<stdio.h>
+                // int main () {
+                
+                //     for (int a= 0 ; a < 10 ; a++ )  // here first instruction is printed any how and second one is conditon and third one is inc or dec or instruction
+                //     {
+                //         printf("The value is %d \n", a);
+                //     }
+                //     return 0 ;
+                // }
+                
+                //finding natural number from number inputed
+                // #include<stdio.h>
+                // int main () {
+                
+                //     int a;
+                
+                //         printf ("Enter The Number here \n");
+                //         scanf ("%d" , &a);
+                
+                //             for ( a ; a > 1 && a < 1000 ; a++ )
+                //                 {
+                //                     printf ("Natural number starting from your number are %d\n",a);
+                //                 }
+                
+                //     return 0 ;
+                // }
+                
+                // we print upper wala code but we excluded 998 here for practise
+                #include <stdio.h>
+                int main()
+                {
+                
+                    int a;
+                
+                    printf("Enter The Number here \n");
+                    scanf("%d", &a);
+                
+                    for (a; a > 1 && a < 1100; a++)
+                    {
+                        if (a != 998)
+                        {
+                            printf("Natural number %d\n", a);
+                        }
+                        else
+                        {
+                            printf("998 is set not to get print\n");
+                        }
+                    }
+                
+                    return 0;
+                }
+        </pre>
+        <hr><br>
+        <h2>dec loop</h2>
+        <pre>#include<stdio.h>
+            int main () {
+                
+                int a ;
+                    printf ("Enter the  number ");
+                    scanf("%d", &a);
+            
+                    for ( a ; a > -100 && a < 100 ; a--)
+                        {
+                            printf ("%d\n", a);
+                        }
+                return 0 ;
+            }
+        </pre>
+        <hr><br>
+        <h2>break</h2>
+        <pre>
+                // #include<stdio.h>
+                    // int main () {
+                    
+                    //     int a = 0 ;
+                       
+                        
+                    //     do {
+                    //         printf ("print the value of %d \n ", a);
+                    //         a++;
+                    //             if (a > 5 ) 
+                    //             {
+                    //                  break ;
+                    //             }
+                    //     }while (a < 10); 
+                         
+                    //     return 0 ;
+                    // }
+                    
+                    #include <stdio.h>
+                    int main () {
+                       
+                       int a ,b , c ;
+                    
+                       printf ("value of a and b enter\n");
+                       scanf ("%d %d", &a ,&b );
+                    
+                       c = a % b ;
+                    //    printf ("div value is %d",c);
+                    do {
+                        if ( c != 0 )
+                            {
+                                printf ("enter another value \n");
+                            }
+                        else if (c == 0 )
+                            {
+                                printf ("true");
+                            }
+                                return 0 ;
+                        }while (c >= 0);
+                       
+                    }
+                }
+            </pre>
+        <hr><br>
+        <h2>break</h2>
+        <pre>
+                #include<stdio.h>
+                    int main () {
+                    
+                        int a  ;
+                        printf ("Enter the number \n");
+                        scanf ("%d", &a);
+                        
+                        do 
+                        {
+                            printf ("The value of a is %d \n ", a );
+                            a++ ;
+                            
+                            if ( a == 50 ) 
+                            {
+                                printf("the value has been limited to here");
+                                break ; 
+                            }
+                    
+                        } while ( a < 100 );
+                        
+                        return 0 ;
+                    }
+            </pre>
+        <hr><br>
+        <h2>Break</h2>
+        <pre>
+                #include<stdio.h>
+                    int main () {
+                    
+                        int a  ;
+                        printf ("Enter the number \n");
+                        scanf ("%d", &a);
+                        
+                        do 
+                        {
+                            printf ("The value of a is %d \n ", a );
+                            a++ ;
+                            
+                            if ( a<=1 ) 
+                            {
+                                printf("the value has been limited to here");
+                                break ;
+                            }
+                    
+                        } while ( a < 100 );
+                        
+                        return 0 ;
+                    }
+                    
+            </pre>
+        <hr><br>
+        <h2>Continue</h2>
+        <pre>
+                #include <stdio.h>
+                    int main()
+                        {
+                            int a ;
+                            a = 0 ;
+                     
+                           
+                            a++ ;
+                            printf("The  value are %d \n" ,a); //first print instruction 
+                            
+                            while ( a < 20) 
+                            {
+                                a++ ;  
+                                printf ("The value is %d \n", a);
+                    
+                                    if ( a >= 20) 
+                                    {
+                                        printf("invalid!");
+                                        continue ;
+                                    }
+                            }
+                    
+                            
+                        }
+            </pre>
+        <hr><br>
+        <h2>Multiplication</h2>
+        <pre>
+                // multiplication table 
+        #include <stdio.h>
+        int main ()
+        {
+            int input ;
+            int multi = 0;
+            int output ;
+        
+            printf(" Enter a  Numbers \n");
+            scanf("%d", &input);
+            do
+            { 
+                multi++ ;
+                printf("%d \n ", input * multi);
+            }while ( multi < 10);
+            return 0;
+            }
+        
+            </pre>
+        <hr><br>
+        <h2>Multiplication table</h2>
+        <pre>
+                #include<stdio.h>
+                    int main () {
+                        
+                        printf("multiplication table of 10 \n");
+                    
+                        for (int a = 50 ; a ; a--)
+                        {
+                           
+                            printf(" 10 * %d = %d \n",a , 10*a);
+                        }
+                        return 0 ;
+                    }
+            </pre>
+        <hr><br>
+        <h2>factorial</h2>
+        <pre>
+                // #include<stdio.h>
+                    // int main () {
+                    //     int intitial = 1; //its the starting number to get multiply
+                    //     int fracof ;//we will take input for which number did we need factorial 
+                    //     int fractorial=1 ; //to set loop for thisss 
+                        
+                    //     printf("Enter the number which you want for fractorial \n");
+                    //     scanf ("%d", &fracof);
+                    
+                    //     for (int  initial =1  ; initial <= fracof ; initial++ )
+                    //     {
+                    //         // fractorial *= initial ;
+                    //         fractorial *= initial ; //get multiplied by adding 1 as our instruction 
+                    //     }
+                    //     printf("The fractorial of %d is %d ", fracof , fractorial);
+                    //     return 0 ;
+                    // }
+                    //next way to find factorial
+                      #include<stdio.h>  
+                    int main()    
+                    {    
+                     int i,fact=1,number;    
+                     printf("Enter a number: ");    
+                      scanf("%d",&number);    
+                        for(i=1;i<=number;i++){    
+                          fact=fact*i;    //this work such that the previous fact value get multiplied by i 
+                      }    
+                      printf("Factorial of %d is: %d",number,fact);    
+                    return 0;  
+                    }   
+            </pre>
+        <hr>
+        <br>
+        <h2>Infinite loop</h2>
+        <pre>
+                //infinite loop 
+        #include<stdio.h>
+        int main () {
+            int a ;
+            
+            scanf ("%d", &a);
+            
+            if (a != 0 && a>0){
+                
+            while ( a !=0 )
+            {
+                printf( " %d\n " , a);
+                continue  ;
+            }
+            }
+            
+        
+            
+            return 0 ;
+        } 
+            </pre>
+        <hr><br>
+        <h2>Random number generating</h2>
+        <pre>
+                /**
+         * @Author: ironman
+         * @Date:   2021-05-26T05:26:25-04:00
+         * @Last modified by:   ironman
+         * @Last modified time: 2021-05-29T03:08:55-04:00
+         */
+        
+        
+        
+        //random number generating
+        #include<stdio.h>
+        #include <stdlib.h>
+        #include <time.h>
+        int main () {
+        
+            int number ;
+        
+            srand (time(0));  ///instruction  to generate numbers randomly frequently
+            number = rand()%10 + 1; //rand number generator
+        
+        
+            printf ("%d  ",number);
+            
+            return 0 ;
+        }
+        
+            </pre>
+        <hr>
+        <br>
+        <h2>
+            Game_guess
+        </h2>
+        <pre>
+                /**
+         * @Author: ironman
+         * @Date:   2021-05-26T08:35:01-04:00
+         * @Last modified by:   ironman
+         * @Last modified time: 2021-05-28T04:54:38-04:00
+         */
+        
+        
+        
+        /*we generated guess game in whiCH we generated random number and make some condition  */
+        #include<stdio.h>
+        #include<stdlib.h>
+        #include<time.h>
+        
+        int main () {
+            int number , guess , attempt = 1;
+            srand (time(NULL));
+            number = rand()%2 + 1;
+        
+                //  printf ("***** RANDOM NUMBER GENERATED BY PROGRAM IS ***** : \n******(%d)****** " , number);;
+                /* Generating random number has completed */
+                //Now instruction for further task to make a guessing game are progammed below ;
+        
+            do
+            {
+                //message for user
+                printf ("Guess the random number generated by program  (1-20)\n ");
+                //asking guess number from user
+                scanf ("%d",&guess);
+                // showing user there guess number
+                printf("\n\nYou guessed --%d--\n",guess);
+                //for showing
+                printf("\nChecking database\n");
+        
+                    //writting condition for cheking
+                    if (guess < number)
+                    {
+                            printf ("\n ***higher number please \n");
+                    }
+                    //same condition and msg to apppear
+                    else if (guess > number)
+                    {
+                            printf ("\n *** Lower Number Please \n");
+                    }
+                    //if upper condition didn't match then this below one get executed
+                    else
+                    {
+                            //message to appear if information get correct
+                            printf ("Huurray! You have guessed the correct number\n");
+                            //showing the random number generated by code
+                            printf ("\n***** RANDOM NUMBER GENERATED BY PROGRAM IS ***** : --- %d ---" , number);
+                            //message
+                            printf ("\nYou have guesed the number in --- %d --- attempt \n congrats once again from ironman !@# \n\n\n " ,attempt);
+                            /* as all upper 3 print instruction will only be printed if we get correct guess
+                            and then if we don't apply break then we will be asked to  enter the guess number
+                            again because loop remain opened though in this condition so we apply break if this
+                            else get executed then loop get closed because in our condition these statement
+                            will only print if guess is write and we just want that*/
+                            break ;
+        
+                    }
+                            //we have puuted attempt variable and each time the loop repeat value of attempt get incr
+                            //ese and we get the number that how much time this loop run and we can declare
+                            // the attempt tried by user and even can print like we have done in upper statement
+                            attempt++;
+            // this below condtion describe us that if the guess number of user din't match with number prouced by
+            //program the loop remain continued
+            }while(guess!=number);
+            return 0 ;
+        
+        }
+        
+            </pre>
+        <hr><br>
+        <h2>fuction basic</h2>
+        <pre>
+                #include<stdio.h>
+                    void display () ;//function protocol 
+                    int main () {
+                        printf ("Initializing function from here\n");
+                        display (); // function call
+                        printf ("function display got ended here\n");
+                        return 0 ;
+                    }
+                    //function defination 
+                    void display () {
+                        printf ("Our instruction get instructed here \n");
+                    }
+            </pre>
+        <hr><br>
+        <h2>Function</h2>
+        <pre>
+                #include <stdio.h>
+                    // #include <stdlib.h>
+                    //Function Protocol 
+                    void Good_Morning ();
+                    void Good_Evening ();
+                    void Good_Night ();
+                    
+                    int main ()
+                    {
+                        printf("Demo of printing multiple function\n");
+                            //Function Call
+                            Good_Morning ();
+                            Good_Evening ();
+                            Good_Night ();
+                        printf ("Function got ended here\n");
+                        return 0 ;
+                    }
+                    //Function defination
+                    void Good_Morning ()
+                    {
+                        printf ("Good Morning Sir , Did you want some cup of tea\n");
+                    }
+                    void Good_Evening ()
+                    {
+                        printf ("Good Evening sir , Did You want some thing\n");
+                    }
+                    void Good_Night ()
+                    {
+                        printf ("Good Night sir , Have a nice dream\n");
+                    }
+            </pre>
+        <hr>
+        <br>
+        <h2>funtion in function</h2>
+        <pre>
+                #include <stdio.h>
+                    void Good_Morning ();
+                    void Good_Evening ();
+                    void Good_Night ();
+                    
+                    int main ()
+                    {
+                        printf("***Demo of printing multiple function***\n");
+                            Good_Morning (); //here main call the function Good_Morning
+                                            // But here Good_morning is calling evening and night
+                        printf ("***Function got ended here***\n");
+                        return 0 ;
+                    }
+                    void Good_Morning ()
+                    {
+                        printf ("       Good Morning Sir , Did you want some cup of tea\n");
+                        Good_Evening (); //evening in morning so it is called by morning at time of execution
+                    }
+                    void Good_Evening ()
+                    {
+                        printf ("       Good Evening sir , Did You want some thing\n");
+                        Good_Night ();//here evening called night at the time of execution
+                    }
+                    void Good_Night ()
+                    {
+                        printf ("       Good Night sir , Have a nice dream\n");
+                        //here night return back get back to main function
+                    }
+            </pre>
+        <hr>
+        <br>
+        <h2>function</h2>
+        <pre>
+                /**
+ * @Author: ironman
+ * @Date:   2021-05-27T05:30:01-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-28T03:44:14-04:00
+ */
+
+
+
+#include <stdio.h>
+//sum is a functionn which takes a and b as input and returns as integer as an output
+int sum (int a , int b);//function prototupe declaration
+
+int main ()
+{
+    int c ;
+    c = sum ( 2,5 ); //function call
+    printf ("The value of c is %d\n",c );
+    int d;
+    d = sum (4 , 5); //function call
+    printf("The value of c is %d ", d);
+
+    return 0 ;
+}
+int sum (int a , int b ) //function defination
+{
+    int c ;
+    c = a + b ;
+    return c ;
+}
+
+            </pre>
+        <hr><br>
+        <h2>Math.h-area of square</h2>
+        <pre>
+                /**
+ * @Author: ironman
+ * @Date:   2021-05-27T06:43:03-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-28T03:44:10-04:00
+ */
+
+
+
+#include<stdio.h>
+#include<math.h>
+int main ()
+{
+    int side ;
+    printf("Enter The value of side \n");
+    scanf("%d", &side);
+    printf("The value of area is %.0f", pow(side,2));
+    return 0;
+}
+//in this library of math is not workiing defination of pow is missing
+//solution is to link the lib
+//but not getting linked 
+
+            </pre>
+        <hr>
+        <br>
+        <h2>Recurssion</h2>
+        <pre>
+                /**
+ * @Author: ironman
+ * @Date:   2021-05-28T04:56:35-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-28T08:04:17-04:00
+ */
+
+
+
+#include "stdio.h"
+int factorial (int x);
+
+int main ()
+{
+  int a;
+  printf("Enter The value of a here \n" );
+  scanf("%d",&a);
+  printf("the value of factorial %d is %d\n",a,factorial(a) );
+  return 0 ;
+}
+
+int factorial (int x)
+{
+  if (x==1 || x==0) {
+  return 1 ;
+  }
+  else {
+    return x * factorial (x-1);
+  }
+}
+ 
+            </pre>
+        <hr>
+        <br>
+        <h2>
+            average
+        </h2>
+        <pre>
+            /**
+ * @Author: ironman
+ * @Date:   2021-05-28T05:34:32-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-28T05:54:20-04:00
+ */
+
+
+
+// finding the average of 3 Numbers ;;
+#include "stdio.h"
+float  average (int a , int b , int c); //function protocol
+
+int main(int argc, char const *argv[])
+{
+  int a,b,c;
+    printf("enter the value of a ,b and c\n" );
+    scanf("%d\n%d\n%d",&a ,&b ,&c );
+
+    printf("The average value of %f is \n", average (a,b,c) ); //function call
+return 0;
+}
+float average (int a , int b , int c ) //function call
+{
+  return (float)(a+b+c)/3;
+}
+
+
+        </pre>
+        <hr>
+        <br>
+        <h2>Cel to farenheit</h2>
+        <pre>
+            /**
+ * @Author: ironman
+ * @Date:   2021-05-28T05:56:14-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-28T06:11:22-04:00
+ */
+
+
+
+//celcius to farenheit formula   is celcius*9/5 +32
+#include "stdio.h"
+float celcius_deg (float c);  //fuction protocol
+
+int main ()
+{
+  float celcius;
+  printf("Enter the value of celcius :\n" );
+  scanf("%f",&celcius);
+  printf("Farenheit of %f is %f \n", celcius , (float)celcius_deg(celcius)); //function calling
+  return 0 ;
+}
+
+float celcius_deg (float c) //function defination
+{
+  float celcius ;
+  celcius = (c * 9/5) +32 ;
+  return  (float)celcius ;
+}
+
+        </pre>
+        <hr>
+        <br>
+        <h2>Force of attraction</h2>
+        <pre>
+    /**
+ * @Author: ironman
+ * @Date:   2021-05-28T07:28:34-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-28T07:45:34-04:00
+ */
+
+
+
+//Force of attraction = mass * gravity
+
+#include "stdio.h"
+float force_of_attraction(float mass);
+
+float main()
+ {
+  float mass ;
+      printf("Enter the value of mass in kg \n" );
+      scanf("%f", &mass);
+
+      printf("Force exerted by earth to the body is %f\n",force_of_attraction(mass) );
+    
+  return 0;
+}
+float force_of_attraction(float mass)
+{
+  float force  ;
+  float gravitational_force ;
+
+  // printf("Enter the value of gravitational force :\n");
+  scanf("%f", &gravitational_force );
+  force = mass * gravitational_force ;
+  return force ;
+}
+
+</pre>
+        <hr> <br>
+        <h2>sum of natural number</h2>
+        <pre>
+    /**
+    * @Author: ironman
+    * @Date:   2021-05-28T08:41:43-04:00
+    * @Last modified by:   ironman
+    * @Last modified time: 2021-05-28T08:42:56-04:00
+    */
+   
+   
+   
+   #include <stdio.h>
+   int addNumbers(int n);
+   int main() {
+       int num;
+       printf("Enter a positive integer: ");
+       scanf("%d", &num);
+       printf("Sum = %d\n", addNumbers(num));
+       return 0;
+   }
+   
+   int addNumbers(int n) {
+       if (n != 0)
+           return n + addNumbers(n - 1);
+       else
+           return n;
+   }
+   
+</pre>
+        <hr> <br>
+        <h2>Fibonacci number</h2>
+        <pre>
+    /**
+ * @Author: ironman
+ * @Date:   2021-05-28T07:49:46-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-28T09:26:31-04:00
+ */
+#include "stdio.h"   //library
+int fibbonacci(int n) ; //function protocol
+  int main() //main body executed
+  {
+    int i;//assigning variable
+   int n ;//assigning variable
+   scanf("%d", &n);  //taking value of to which we have to disply the fibbonacci number
+   printf("Fibbonacci of %d: ", n); //Message
+
+   for(i = 0;i<n;i++)//codition is putted such inital value of i is 0 and it get replicate (i++) till its value remain below n .
+   {
+   printf("%d ",fibbonacci(i)); //printing final where function has been called to be applied in i
+   }
+   //body got close or main function got ended here
+}
+int fibbonacci(int n) //function defination started from here ..
+{
+   if(n == 0) //if n value is 0 then value returned is 0 and this also says that 0 is true for the condition so that 0 is also printed
+   {
+      return 0; //returning value to 0 and this also works to break the process or simply it get closed
+   }
+   else if(n == 1) //if value is 1 then 1 is returned instead of closing
+   {
+      return 1; //return value
+   }
+   else //if upper condition didn't match then this will get executed
+   {
+      return (fibbonacci(n-1) + fibbonacci(n-2)); //it will add previous numbers to post results .
+   }
+}
+   >
+                    
+</pre>
+        <hr><br>
+        <h2>star</h2>
+        <pre>// /**
+    //  * @Author: ironman
+    //  * @Date:   2021-05-28T09:38:36-04:00
+    //  * @Last modified by:   ironman
+    //  * @Last modified time: 2021-05-28T11:47:53-04:00
+    //  */
+    
+    
+    // //n is line
+    // #include "stdio.h"
+    // void printpattern (int n);
+    // int main (){
+    //   int n ;
+    //   scanf("%d", &n );
+    //   printpattern (n);
+    //   return 0 ;
+    // }
+    // //for n =3
+    // //*
+    // //***
+    // //*****
+    // // 1 - 1
+    // // 2 - 3
+    // // 3 - 5
+    // // (2n-1)    
+    // void printpattern (int n){
+    //   if (n==1){
+    //     printf("*\n");
+    //     return ;
+    //   }
+    //   printpattern(n-1);
+    //   for (int i = 0 ; i < 2*n-1 ; i++) {
+    //     printf ("*");
+    //   }
+    //   printf("\n");
+    // }
+    
+    
+    
+    </pre>
+        <hr><br>
+        <h2>pointer</h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-28T12:05:32-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-29T01:24:00-04:00
+ */
+
+
+
+#include "stdio.h"
+
+int main(){
+  int i = 3 ;
+  int *j  = & i ;
+  //j will now store the address of i
+
+  //we can even store adresss of j in another variable ,
+  //lets suppose i am going to store *j variable address in new variable like k
+  // so we will write it with 2 star **
+  int **k ;
+  k = &j ;
+
+  //the value of i which we have set is printed
+  printf("the value of i is %d\n",i );
+
+
+  //this will print the value of i because adress of i has already beens stored in *j
+  printf("The value of i is %d\n", *j);
+
+
+  //as %u has been used and &i has printed so it will print the adress of i
+  printf("The address of i is %u\n",&i );
+
+
+  //it will also print the adress of i because adress of i has been stored in variable j
+  printf("The address of i is %u\n", j);
+
+
+  //the j variable  has stored the address and in this instruction  we are finding the adress of j variable ,matlab
+  //jisneey store kiya hai usi ka address hum log nikal rahe hai ismey
+  printf("the address of j is %u\n", &j);
+
+
+  //as address of i has been stored in j variable so the value for j will be the adress of i
+  printf("The value of j is %u\n", *(&j));
+
+  //this both will print the address of k
+  printf ("The value of k or address of j is %u\n" ,*k);
+  printf ("The address of k is %u\n" ,&k);
+
+  printf ("The value of k is %u\n" , k);
+
+
+
+}
+
+    </pre>
+        <hr><br>
+        <h2>
+            pointer
+        </h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-29T01:53:32-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-29T02:45:31-04:00
+ */
+
+
+
+#include "stdio.h"
+int main(){
+  int a ; //the variable of  which we are going to find address
+  printf ("the address of a is %u\n" , &a);
+
+
+  //similary if we want to print the value of a then we will do this but lets first put the value in a variable
+  printf("Enter the value of a \n" );
+  scanf ("%d" , &a) ;
+  printf("the value of a is %d\n",a); //simply but what if we call the value of a through address or pointer option
+
+  // Now lets create a varible/pointer that will store the adderss of a
+  int *store ;
+  store = &a ; //store keep the address of a ,,,we can print the value of a such that
+  //this will print the value of a
+  printf("The value of a is %d\n", *store );
+  //but if we just put store to be print instead of *store then we will get adress of a because store carries the address of a which intially become value for store
+  //like this
+  printf ("the address of a is %u = the value of store is %d" , &a , store);
+
+  return 0;
+}
+
+    </pre>
+        <hr><br>
+        <h2>Pointer</h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-29T02:48:16-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-29T03:25:59-04:00
+ */
+
+
+
+#include "stdio.h"
+#include "stdlib.h"
+#include "time.h"
+//function
+void address_not_same(int i){
+  printf("the address of i (function wala) is %u\n", &i);
+  printf("The value of i is %d\n", i);
+  /* as main function wala i comes here as a copy so the value of i in function is
+  also same but i of both main and function are different so the addressse are not same
+  also if  we change the variable from i to something than also we will not get any problem
+  like this
+
+  void address_not_same(int a){
+    printf("the address of a (function wala) is %u\n", &a);
+    printf("The value of a is %d\n", a);
+  }
+  */
+}
+//body / main
+ int main ()
+{
+  //generating a random value of i
+  int i ;
+  srand(time(0));
+  i = rand ()%10 +1 ;
+  //generating value has finished
+  //printing the value of i
+  printf("The value of i (main wala) is %u\n" , i);
+  //printing the address of i
+  printf("The address of i (main wala) is %u\n" , &i);
+  //function called and the value of i has send to address_not_same function as an copy
+  //where function wala  i is totally different/no connection of two i
+  //the value of main wala i just  reached to fuction as an a copy and as the address of i will
+  //also get differ
+  address_not_same (i);
+  return 0;
+}
+
+    </pre>
+        <hr><br>
+        <h2>call by reference</h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-29T03:32:40-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-29T04:58:09-04:00
+ */
+
+
+
+// write a  program to change the value of a variable to ten times of its current value .
+// and write a function  and pass the value by reference
+#include "stdio.h"
+#include "stdlib.h"
+#include "time.h"
+
+void funtest (int a , int b , float *avg  ) { //i commanded such that variable of main send value of x and y
+  /*  and address of avg in term of address operator so it happens that address operator *avg float got the
+  adress of avg from main &avg and similiary *avg = ..function.....get written in address not in variable so
+  we we have change the value of avg in main two */
+  printf("%d %d \n", a ,b );
+  printf("%u %u\n", &a ,&b );
+  *avg=(float)( a + b )/2 ;
+
+}
+
+int main ()
+{
+  int x , y ;
+   float avg =10 ; // here the avg value stored is 10 but we have sent the address of this variable due to which 
+   //the value will get overwritten in this adress and previous value get changed
+  srand (time(0));
+  y=rand()%5 + 1 ;
+  srand (time(0));
+  x=rand()%6 + 1 ;
+  printf("The value of x and y is %d\n ,%d \n", x, y );
+  printf("The address of x and y is %u\n ,%u \n", &x, &y );
+
+  printf("the value of avg is %f \n" , avg); // function hunu bhanda agadi avg ko value 
+  funtest (x ,y, &avg);
+  printf("the value of avg is %f \n" , avg); // function bhaye sakeko wala avg
+  return 0 ;
+}
+
+    </pre>
+        <hr><br>
+        <h2>
+            pointers
+        </h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-29T03:57:26-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-29T04:07:16-04:00
+ */
+
+
+
+// write a program using a funtion which calculates the sum and average of two nymbers
+// use the pointers and print the values of sum anf average in main ().
+
+#include "stdio.h"
+
+void sumandavg(int a , int b , int *sum , float *avg){
+*sum = a + b ;
+*avg = (float)(*sum)/2 ;
+}
+
+int main ()
+{
+  int i, j , sum ;
+  float avg ;
+  i =3  ;
+  j = 6 ;
+  sumandavg(i,j,&sum , &avg);
+  printf("the value of sum is %d \n",sum );
+  printf("the value of avg is %f \n",avg );
+
+  return  0;
+}
+
+    </pre>
+        <hr><br>
+        <h2>pointers to pointers</h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-29T05:04:22-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-29T05:19:14-04:00
+ */
+
+
+
+#include "stdio.h"
+
+char main ()
+{
+  char p = '*' ;
+  char *p1  ;
+  char **p2 ;
+  p1 = &p ;
+  p2 = &p1;
+  printf("the value of p is %c\n", **p2 );
+  return 0 ;
+}
+
+    </pre>
+        <hr><br>
+        <h2>reference</h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-29T05:22:13-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-29T05:34:12-04:00
+ */
+
+
+
+// write a  program to change the value of a variable to ten times of its current value .
+// and write a function  and pass the value by reference
+
+#include "stdio.h"
+void  org_change (int num , int *add ){ // this function simply edit the value considering address
+  printf("num is %d\n", num );
+  *add = 10 *num  ;
+}
+int main ()
+{
+  int a ;
+  int b ;
+  org_change (5  , &b);
+  printf("The value of b is %d\n", b );
+  return 0 ;
+}
+
+
+
+
+
+
+//  same by calling function by call 
+// #include "stdio.h"
+// void  org_change (int num , int *add ){ // this function simply edit the value considering address
+//   printf("num is %d\n", num );
+//   *add = 10 *num  ;
+// }
+// int main ()
+// {
+//   int a ;
+//   int b ;
+//   org_change (5  , &b);
+//   printf("The value of b is %d\n", b );
+//   return 0 ;
+// }
+
+    </pre>
+        <hr>
+        <br>
+        <h2>
+            array
+        </h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-30T04:18:26-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-30T04:32:46-04:00
+ */
+
+
+
+#include "stdio.h"
+
+int main ()
+{
+  int a[4]; //it means we can store  4 value in 1 variable
+
+  printf("Enter the marks obtain by sujal in sequence phy,che,bio,comp\n" );
+  //taking value in this variable noting  point is that the array start from 0 and goes on
+  scanf ("%d %d %d %d", &a[0] ,&a[1] ,&a[2] , &a[3]);
+  //printing the arrrays value or value which we have already taken
+  printf("Marks obtain by a in \n phy : %d \n che : %d \n bio : %d \n \t And in \n comp : %d ",a[0] ,a[1] ,a[2] , a[3]);
+  return 0;
+}
+
+    </pre>
+        <hr><br>
+        <h2>
+            array input
+        </h2>
+        <pre>
+        /**
+        * @Author: ironman
+        * @Date:   2021-05-30T04:41:38-04:00
+        * @Last modified by:   ironman
+        * @Last modified time: 2021-05-30T04:59:24-04:00
+        */
+       
+       
+       
+       #include "stdio.h"
+       int main ()
+       // int timepass (){
+       
+       }
+       {
+         int a [5] ;
+       
+             for (size_t i = 0; i < 5; i++)
+             {
+             printf("Enter The value of a \n a%d : ",i+1 );
+             scanf("%d", &a[i]); //here i is just a number so that user will get a1 a2 ... instead of getting a0 a1 ...
+             }
+       
+             for (size_t i = 0; i < 5; i++) {
+             printf ("the value of a are \n a%d = %d \n" , i+1 , a[i]);
+             }
+             printf("the  address of a[0] is %u\n : " , a[0]);
+             // timepass(&a[0]);
+       
+       
+         return 0;
+       }
+       
+    </pre>
+        <hr><br>
+        <h2>pointers and array</h2>
+        <pre>
+        /**
+ * @Author: ironman
+ * @Date:   2021-05-30T08:58:54-04:00
+ * @Last modified by:   ironman
+ * @Last modified time: 2021-05-30T10:15:27-04:00
+ */
+#include "stdio.h"
+int main ()
+{
+int a = 1 ;
+printf("the value of a is %d\n",a );
+printf("the adress of a is %u\n" , &a);  //this will be equal to value of  storage
+
+int *storage = &a ;
+int b ;
+printf ("the address of b is %u\n" ,&b); //a new storage will be aloctes
+
+printf ("the value of storage is %d\n" , storage);
+printf ("the address of storage is %u\n" , &storage); //this address is quiet different
+
+//original pointers basic begin from here upper portion was some warddd previous topics
+//similary see this now
+printf("\n\n" );
+storage ++ ;
+printf ("the value of storage is %d\n" , storage);
+//the value of storage get change by 4 though storage ++ means adding 1 that means that
+//my computer architecture stores an interger at 4 bytes each
+//now lets see in character category
+char x ;
+char *y ;
+y = &x ;
+printf("The value of y which is also an address of x %d\n", y);
+y++ ;
+printf("The the value of y after increment is %d\n", y); //we see it is increased bu 1 means each character acquire 1 byte storage in memory
+return 0 ;
+}
+
+    </pre>
+        <hr><br>
+        <h2>pointer and array</h2>
+        <pre>
+        #include <stdio.h>
+            int main ()
+            {
+                    int num[4] ; //array making of 4 num
+            
+                    int *store ; //making a pointer 
+                    store = & num[0] ; //storing array 1st variable here
+            
+            
+                    //now we will just see that i store the input of all array  by increasing the address which is stored in store pointer
+                    //simply I have increased store value which is actuall a address due to which we get new address instead of getting number
+                    for ( int i = 0 ; i < 4 ; i++ )
+                    {
+                        //taking input loop
+                        printf("Enter the num %d :- " , i+1) ;
+                        scanf("%d", store);
+                        store++ ;
+                    }
+                    for ( int i = 0 ; i < 4 ; i++ )
+                    {
+                        //showing input value 
+                        printf("the value of %d is :- %d\n" , i+1 , num[i] );
+                    }
+                    return 0 ;
+            }
+    </pre>
+        <hr><br>
+        <h2>passing array</h2>
+        <pre>
+        //passing array value from main to function value and then printing the function 
+#include <stdio.h>
+
+//yo kam lagnu parney ho 
+// void function (int *arraystore , int number)
+// {   
+//     for (int i = 0; i < number; i++)
+//     {
+//     printf("The value of main wala array %d is %d\n", i , *(arraystore+1));
+//     }
+    
+// }
+
+void function ( int array[] , int  number) 
+{
+    for (int  i = 0; i < number; i++)
+    {
+        printf("The value of element  %d is %d\n" , i + 1 , array[i] );
+    }
+    // i can even change the original array number from here 
+    //like below method parney
+    array[2] = 34 ;
+}
+
+int main ()
+{
+    int arraystart [] = {1,2,10,5,6 };
+    function (arraystart , 5);
+    printf("The value of arraystart 2 would have got change \nso final value of arraystart 2 is %d " , arraystart[2]);
+    return 0 ;
+}
+    </pre>
+        <hr><br>
+        <h2>passing arary</h2>
+        <pre>
+        //this program works completely work
+
+#include <stdio.h>
+int function (int *sto , int n ) {
+for (int i = 0 ; i < n ; i++)
+{
+    printf ("The element of array %d is %d\n " , i , *sto);
+    sto++ ;
+}
+}
+
+int main ()
+{
+    int a[] = {1,2,3,5,5} ;
+    function ( &a , 5);
+    return 0 ;
+}
+    </pre>
+        <hr>
+        <br>
+        <h2>Multidimensional</h2>
+        <pre>
+        // #include <stdio.h>
+
+
+            // int main ()
+            // {
+            //     int students = 3, subjects = 5; 
+            //     int marks [3][2]; //marks array will work to store value 
+            
+            //     for (int i = 0; i < students; i++)
+            //     {
+            //         for (int j = 0; j < subjects; j++)
+            //         {
+            //             printf("Enter the marks of student %d in subject %d\n" , i+1 , j+1);
+            //             scanf("%d" ,&marks[i][j]); //as i and j get increase so it get a sequence of marks [0] , marks [1] ...and so on 
+            //         }
+                    
+            //     }
+            //     for (int  i = 0; i < students; i++)
+            //     {
+            //         for (int j = 0; j < subjects; j++) 
+            //         {
+            //             printf("The marks of student %d in subject %d is %d\n ", i+1 , j+1 , marks [i][j]); 
+            //             //as i and j get increase so it get a sequence of marks [0] , marks [1] ...and so on 
+            //         }
+                    
+            //     }
+                
+                
+            
+            
+            // return 0 ;
+            // }       
+    </pre>
+        <hr><br>
+        <h2>
+            verifying
+        </h2>
+        <pre>
+        #include <stdio.h>
+            int main ()
+            {
+                int array [10] ;
+                int *ptr =array ; 
+                //upper line and this line works same
+                //int *ptr = &array[0] ;
+                 ptr = ptr  + 2 ; 
+                if (ptr == &array [2])  
+                {
+                    printf("These point to same location\n");
+                }
+                else {	
+                    printf("These do not point to same location\n");
+                }
+                //addresses of ptr and arrray is printed below
+                printf("The value of ptr or address being stored in pointer ptr is %d and the address of array is %d\n", ptr ,&array[2]);
+            
+                return 0 ;
+            }
+    </pre>
+        <hr>
+        <br>
+        <h2>array multiplication</h2>
+        <pre>
+        // write a program to create an array of 10 integers and store multiplication table of n in it .
+#include <stdio.h>
+
+
+int main ()
+{
+    int multiply [10] ;
+    int n ;
+    
+        printf("Enter the number : \n");
+        scanf ("%d",&n);
+
+            for (int i = 0; i < 10; i++)    
+                {
+                            multiply[i] = n*(i+1) ;    
+                }
+            for (int i = 0; i < 10; i++)
+                {
+                    printf("%d X %d = %d \n" ,n ,i+1 , multiply[i] ) ;
+                }
+    
+return 0 ;
+}
+    </pre>
+        <hr>
+        <br>
+        <h2>array reversing</h2>
+        <pre>
+        //make array 
+//create function
+//take address of array to a function 
+// take the size of array in function 
+//swap array 0 with array last where 0 inc and last array dec 
+//like array[i] , array [n-i-1]
+//reverse aadi number lai matra size by 2 
+//swap technic use style here a
+
+
+#include <stdio.h>
+int reverse(int *array , int n ) 
+{
+    int temp ;
+    for (int i = 0; i < n/2 ; i++)
+    {
+        temp = array[i] ; //here i stored the value of array up to 2  for swapping
+        array[i] = array[n-i-1]; //this will  pass the value in reverse order
+        array [n-i-1] = temp ;
+
+        // array[i] = array[n-i-1]; //this work like array[0] gets equal to array[7]
+        // array [n-i-1] = temp ; //this work like array [7] gets equal to array[0]
+
+    }
+    
+}
+
+int main ()
+{
+    int array[] = {1 ,2 ,4 ,3 ,5} ;
+    //now i will send the array and n value to swap the value in function
+    reverse (array , 5);
+    for (int i = 0; i < 5 ; i++)
+    {
+        printf ("The value of %d element is : %d\n " ,i+1, array[i]);
+    }
+
+return 0 ;
+}
+    </pre>
+        <hr><br>
+        <h2>counting positive integer in array</h2>
+        <pre>
+            
+
+// C program to find the count of positive
+// and negative integers in an array
+  
+#include <stdio.h>
+  
+// Function to find the count of
+// positive integers in an array
+int countPositiveNumbers(int* arr, int n)
+{
+    int pos_count = 0;
+    int i;
+    for (i = 0; i < n; i++) {
+        if (arr[i] > 0)
+            pos_count++;
+    }
+    return pos_count;
+}
+  
+// Function to find the count of
+// negative integers in an array
+int countNegativeNumbers(int* arr, int n)
+{
+    int neg_count = 0;
+    int i;
+    for (i = 0; i < n; i++) {
+        if (arr[i] < 0)
+            neg_count++;
+    }
+    return neg_count;
+}
+  
+// Function to print the array
+void printArray(int* arr, int n)
+{
+    int i;
+  
+    printf("Array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+  
+// Driver program
+int main()
+{
+    int arr[] = { 2, -1, 5, 6, 0, -3 };
+    int n;
+    // n = sizeof(arr) / sizeof(arr[0]);
+    //instead of sending size of array manually like i have done below sending 6 i can even use this
+    n = 6 ; //Like this 
+    printArray(arr, 6);
+  
+    printf("Count of Positive elements = %d\n",
+           countPositiveNumbers(arr, n));
+    printf("Count of Negative elements = %d\n",
+           countNegativeNumbers(arr, n));
+  
+    return 0;
+}
+
+    </pre>
+        <hr><br>
+        <h2>math lib</h2>
+        <pre>
+        #include <stdio.h>
+            #include <math.h>
+            
+            int main ()
+            {
+                int num ;
+                printf ("Enter the number of which you want to know square : ") ;
+                scanf("%d", &num);
+            
+                printf("\nsquare of %d is %0.0f \n",num ,(double) pow(num , 2));
+                printf ("\n Mathematically\n");
+                printf ("\n%d ^ 2 = %0.0f" , num , (double) pow (num ,2 ));
+                return 0;
+            }
+    </pre>
+        <hr>
+        <br>
+        <h2>array multiplication</h2>
+        <pre>
+            // create an array of size 3 x 10 cointaining  multiplication table of the 3 number
+#include <stdio.h>
+#include <stdlib.h>
+void printtable(int *multable, int num, int n)
+{
+    printf("multiplication table of %d\n ", num);
+    printf("__________________________\n\n");
+    for (int i = 0; i < n; i++)
+    {
+        multable[i] = num * (i + 1);
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%dx%d = %d\n\n", num, i + 1, multable[i]);
+    }
+}
+
+int main()
+{
+    int multable[3][10];
+    int a, b, c;
+
+    printf("Enter Three number\n");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+
+    printf("The value which you have entered is : %d , %d and %d ", a, b, c);
+
+    printtable(multable[0], a, 10);
+    printtable(multable[1], b, 10);
+    printtable(multable[2], c, 10);
+    return 0;
+} 
+        </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
